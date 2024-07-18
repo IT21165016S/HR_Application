@@ -69,12 +69,61 @@ const Register = () => {
                 <InputGroup className="input-group-alternative mb-3">
                   <InputGroupAddon addonType="prepend">
                     <InputGroupText>
-                      <i className="ni ni-hat-3" />
+                      <i className="ni ni-single-02" />
                     </InputGroupText>
                   </InputGroupAddon>
-                  <Input placeholder="Name" type="text" />
+                  <Input type="select" name="userType" id="userType">
+                    <option value="">Select User Type</option>
+                    <option value="Intern">Admin</option>
+                    <option value="Contract-Basis">User</option>
+                  </Input>
                 </InputGroup>
               </FormGroup>
+              <FormGroup>
+                <InputGroup className="input-group-alternative mb-3">
+                  <InputGroupAddon addonType="prepend">
+                    <InputGroupText>
+                      <i className="ni ni-tag" />
+                    </InputGroupText>
+                  </InputGroupAddon>
+                  <Input
+                    type="select"
+                    name="employmentType"
+                    id="employmentType"
+                  >
+                    <option value="">Select Employment Type</option>
+                    <option value="Intern">Intern</option>
+                    <option value="Contract-Basis">Contract-Basis</option>
+                    <option value="Permanent">Permanent</option>
+                  </Input>
+                </InputGroup>
+              </FormGroup>
+              <Row>
+                <Col lg="6" md="6" sm="12">
+                  <FormGroup>
+                    <InputGroup className="input-group-alternative mb-3">
+                      <InputGroupAddon addonType="prepend">
+                        <InputGroupText>
+                          <i className="ni ni-circle-08" />
+                        </InputGroupText>
+                      </InputGroupAddon>
+                      <Input placeholder="First Name" type="text" />
+                    </InputGroup>
+                  </FormGroup>
+                </Col>
+                <Col lg="6" md="6" sm="12">
+                  <FormGroup>
+                    <InputGroup className="input-group-alternative mb-3">
+                      <InputGroupAddon addonType="prepend">
+                        <InputGroupText>
+                          <i className="ni ni-circle-08" />
+                        </InputGroupText>
+                      </InputGroupAddon>
+                      <Input placeholder="Last Name" type="text" />
+                    </InputGroup>
+                  </FormGroup>
+                </Col>
+              </Row>
               <FormGroup>
                 <InputGroup className="input-group-alternative mb-3">
                   <InputGroupAddon addonType="prepend">
@@ -86,6 +135,30 @@ const Register = () => {
                     placeholder="Email"
                     type="email"
                     autoComplete="new-email"
+                  />
+                </InputGroup>
+              </FormGroup>
+              <FormGroup>
+                <InputGroup className="input-group-alternative mb-3">
+                  <InputGroupAddon addonType="prepend">
+                    <InputGroupText>
+                      <i className="ni ni-laptop" />
+                    </InputGroupText>
+                  </InputGroupAddon>
+                  <Input placeholder="Designation" type="text" />
+                </InputGroup>
+              </FormGroup>
+              <FormGroup>
+                <InputGroup className="input-group-alternative mb-3">
+                  <InputGroupAddon addonType="prepend">
+                    <InputGroupText>
+                      <i className="ni ni-mobile-button" />
+                    </InputGroupText>
+                  </InputGroupAddon>
+                  <Input
+                    placeholder="Mobile"
+                    type="number"
+                    autoComplete="new-mobile"
                   />
                 </InputGroup>
               </FormGroup>

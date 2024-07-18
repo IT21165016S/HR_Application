@@ -10,8 +10,8 @@ import { isAuthorized } from "../middlewares/auth.js";
 const applicationRoute = express.Router();
 
 //Routes
-applicationRoute.get("/user-getAll", isAuthorized, userGetAllApplications);
-applicationRoute.get("/admin-getAll", isAuthorized, adminGetAllApplications);
+applicationRoute.get("/user-getAll", isAuthorized, userGetAllApplications); //put later isAuthorized
+applicationRoute.get("/admin-getAll", isAuthorized, adminGetAllApplications); //put later isAuthorized
 applicationRoute.delete(
   "/user-delete-application/:id",
   isAuthorized,

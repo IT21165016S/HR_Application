@@ -20,10 +20,22 @@ import {
 } from "reactstrap";
 // core components
 import Header from "components/Headers/Header.js";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { adminGetAllApplications } from "../features/Application/applicationSlice";
 
 const ApplicationTable = () => {
   const [selectedStatus, setSelectedStatus] = useState("");
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(adminGetAllApplications());
+  }, []);
+
+  const getOrdersState = useSelector(
+    (state) => state.application.adminApplications
+  );
 
   const handleStatusChange = (index) => (event) => {
     const newStatus = [...selectedStatus];
@@ -54,13 +66,13 @@ const ApplicationTable = () => {
                 <thead className="thead-light">
                   <tr>
                     <th scope="col">Full Name</th>
-                    <th scope="col">Resume</th>
+                    <th scope="col">Birth Date</th>
                     <th scope="col">Mobile No</th>
                     <th style={{ textAlign: "center" }} scope="col">
                       Email
                     </th>
+                    <th scope="col">NIC</th>
                     <th scope="col">Job Position</th>
-                    <th scope="col">Company</th>
                     <th scope="col">Status</th>
                     <th scope="col" />
                   </tr>
@@ -81,21 +93,7 @@ const ApplicationTable = () => {
                           </th>
                           <td>12-05-1999</td>
                           <td>70 2922 429</td>
-                          <td>
-                            <Media className="align-items-center">
-                              <a
-                                className="avatar rounded-circle mr-3"
-                                href="#pablo"
-                                onClick={(e) => e.preventDefault()}
-                              >
-                                <img
-                                  alt="..."
-                                  src={require("../../assets/img/theme/team-1-800x800.jpg")}
-                                />
-                              </a>
-                              sahanpallage19@gmail.com
-                            </Media>
-                          </td>
+                          <td>sahanpallage19@gmail.com</td>
                           <td>1398745662V</td>
                           <td>Software Engineer</td>
                           <td>

@@ -4,8 +4,8 @@ import Register from "views/examples/Register.js";
 import Login from "views/examples/Login.js";
 import Tables from "views/examples/Tables.js";
 import EmpTable from "views/employee/EmpTable";
-import JobTable from "views/jobs/JobTable";
-import ApplicationTable from "views/application/ApplicationTable";
+import JobTable from "views/JobTable";
+import ApplicationTable from "views/ApplicationTable";
 import LeavesTable from "views/leaves/LeavesTable";
 import LeavesApplyForm from "views/leaves/LeavesApplyForm";
 
