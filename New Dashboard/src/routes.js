@@ -8,6 +8,7 @@ import JobTable from "views/jobs/JobTable";
 import ApplicationTable from "views/application/ApplicationTable";
 import LeavesTable from "views/leaves/LeavesTable";
 import LeavesApplyForm from "views/leaves/LeavesApplyForm";
+import ViewTickets from "views/tickets/ViewTickets";
 
 var routes = [
   {
@@ -71,6 +72,13 @@ var routes = [
     name: "Programs",
     icon: "ni ni-archive-2 text-default",
     component: <Tables />,
+    layout: "/admin",
+  },
+  {
+    path: "/tickets",
+    name: "Tickets",
+    icon: "ni ni-single-copy-04 text-blue",
+    component: <ViewTickets/>,
     layout: "/admin",
   },
   {

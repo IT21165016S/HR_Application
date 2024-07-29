@@ -62,6 +62,7 @@ app.use(express.json({ limit: "10mb" }));
 app.use(express.urlencoded({ extended: true }));
 
 app.use(fileUpload({ useTempFiles: true, tempFileDir: "/tmp/" })); //File Upload Middleware
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));//tickets file upload
 
 app.use(morgan("dev"));
 
