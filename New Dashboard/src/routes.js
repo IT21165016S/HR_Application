@@ -2,12 +2,15 @@ import Index from "views/Index.js";
 import Profile from "views/examples/Profile.js";
 import Register from "views/examples/Register.js";
 import Login from "views/examples/Login.js";
-import Tables from "views/examples/Tables.js";
 import EmpTable from "views/employee/EmpTable";
 import JobTable from "views/JobTable";
 import ApplicationTable from "views/ApplicationTable";
 import LeavesTable from "views/leaves/LeavesTable";
 import LeavesApplyForm from "views/leaves/LeavesApplyForm";
+import Programs from "views/examples/Programs";
+import SalarySheet from "views/examples/Salary";
+import ApplyEmployee from "views/examples/ApplyEmployee";
+import AddJobs from "views/examples/AddJobs";
 
 var routes = [
   {
@@ -15,6 +18,56 @@ var routes = [
     name: "Dashboard",
     icon: "ni ni-tv-2 text-primary",
     component: <Index />,
+    layout: "/admin",
+  },
+  {
+    path: "/add-jobs",
+    name: "Add Jobs",
+    icon: "ni ni-briefcase-24 text-orange",
+    component: <AddJobs />,
+    layout: "/admin",
+  },
+  {
+    path: "/jobs",
+    name: "Jobs",
+    icon: "ni ni-briefcase-24 text-orange",
+    component: <JobTable />,
+    layout: "/admin",
+  },
+
+  {
+    path: "/application",
+    name: "Application",
+    icon: "ni ni-folder-17 text-red",
+    component: <ApplicationTable />,
+    layout: "/admin",
+  },
+  {
+    path: "/employee",
+    name: "Employee",
+    icon: "ni ni-single-02 text-red",
+    component: <EmpTable />,
+    layout: "/admin",
+  },
+  {
+    path: "/apply-employee",
+    name: "Apply Employee",
+    icon: "ni ni-single-02 text-red",
+    component: <ApplyEmployee />,
+    layout: "/admin",
+  },
+  {
+    path: "/salary",
+    name: "Salary",
+    icon: "ni ni-money-coins text-green",
+    component: <SalarySheet />,
+    layout: "/admin",
+  },
+  {
+    path: "/programs",
+    name: "Programs",
+    icon: "ni ni-archive-2 text-default",
+    component: <Programs />,
     layout: "/admin",
   },
   {
@@ -32,45 +85,10 @@ var routes = [
     layout: "/admin",
   },
   {
-    path: "/jobs",
-    name: "Jobs",
-    icon: "ni ni-briefcase-24 text-orange",
-    component: <JobTable />,
-    layout: "/admin",
-  },
-  {
     path: "/user-profile",
     name: "User Profile",
     icon: "ni ni-circle-08 text-yellow",
     component: <Profile />,
-    layout: "/admin",
-  },
-  {
-    path: "/application",
-    name: "Application",
-    icon: "ni ni-folder-17 text-red",
-    component: <ApplicationTable />,
-    layout: "/admin",
-  },
-  {
-    path: "/employee",
-    name: "Employee",
-    icon: "ni ni-single-02 text-red",
-    component: <EmpTable />,
-    layout: "/admin",
-  },
-  {
-    path: "/salary",
-    name: "Salary",
-    icon: "ni ni-money-coins text-green",
-    component: <Tables />,
-    layout: "/admin",
-  },
-  {
-    path: "/programs",
-    name: "Programs",
-    icon: "ni ni-archive-2 text-default",
-    component: <Tables />,
     layout: "/admin",
   },
   {

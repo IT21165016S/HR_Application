@@ -1,22 +1,5 @@
-/*!
-
-=========================================================
-* Argon Dashboard React - v1.2.4
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-dashboard-react
-* Copyright 2024 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-
 // reactstrap components
+import { Link } from "react-router-dom";
 import {
   Button,
   Card,
@@ -83,6 +66,20 @@ const Login = () => {
               <small>Or sign in with credentials</small>
             </div>
             <Form role="form">
+              <FormGroup>
+                <InputGroup className="input-group-alternative mb-3">
+                  <InputGroupAddon addonType="prepend">
+                    <InputGroupText>
+                      <i className="ni ni-single-02" />
+                    </InputGroupText>
+                  </InputGroupAddon>
+                  <Input type="select" name="userType" id="userType">
+                    <option value="">Select User Type</option>
+                    <option value="Intern">Admin</option>
+                    <option value="Contract-Basis">User</option>
+                  </Input>
+                </InputGroup>
+              </FormGroup>
               <FormGroup className="mb-3">
                 <InputGroup className="input-group-alternative">
                   <InputGroupAddon addonType="prepend">
@@ -139,7 +136,9 @@ const Login = () => {
               href="#pablo"
               onClick={(e) => e.preventDefault()}
             >
-              <small>Forgot password?</small>
+              <Link>
+                <small>Forgot password?</small>
+              </Link>
             </a>
           </Col>
           <Col className="text-right" xs="6">
@@ -148,7 +147,9 @@ const Login = () => {
               href="#pablo"
               onClick={(e) => e.preventDefault()}
             >
-              <small>Create new account</small>
+              <Link to="/auth/register">
+                <small>Create new account</small>
+              </Link>
             </a>
           </Col>
         </Row>
