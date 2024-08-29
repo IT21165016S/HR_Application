@@ -8,19 +8,27 @@ import "assets/scss/argon-dashboard-react.scss";
 
 import AdminLayout from "layouts/Admin.js";
 import AuthLayout from "layouts/Auth.js";
+
 import { Provider } from "react-redux";
-import { store } from "./app/store.js";
+import { store } from "../src/views/tickets/redux/store";
+import TicketDetails from "views/tickets/TicketDetail.jsx";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <Provider store={store}>
     <BrowserRouter>
+    <Provider store={store}>
       <Routes>
         <Route path="/admin/*" element={<AdminLayout />} />
         <Route path="/auth/*" element={<AuthLayout />} />
         <Route path="*" element={<Navigate to="/admin/index" replace />} />
+
+        {/* <Route path="/admin/tickets" element={<ViewTickets/>} /> */}
+      <Route path="/admin/tickets/:ticketId" element={<TicketDetails/>}/>
+
       </Routes>
+      </Provider>
     </BrowserRouter>
   </Provider>
 );
